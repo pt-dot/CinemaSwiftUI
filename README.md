@@ -1,19 +1,20 @@
-# CinemaSwiftUI
+## iOS Base Project
 
-Sample project built with SwiftUI and use MVVM pattern, this application implements api from [themoviedb](http://themoviedb.org).
+> Sample project for iOS developer
+
 
 <p><img src="image.png" width="1257"></p>
 
 #### Requirement
 ```
-- iOS 11.0+
-- Xcode 12.5
+- Xcode 12.5+ 
 ```
 
-## Getting Started
-add api key themoviedb to `core/data/constant`, attribute `apiKey`
+### Getting Started
+- Get api key [TheMovieDb](https://www.themoviedb.org/settings/api)
+- Add api key themoviedb to `core/data/constant`, attribute `apiKey`
 
-to run this project
+run this project
 
 ```
   sudo gem install cocoapods
@@ -22,6 +23,56 @@ to run this project
 
 ```
 
+### Pattern Architecture  
+- MVVM
+
+<img src="mvvm.jpeg" />
+
+### Resource 
+Separate resource for each features
+
+```
+Project Name
+    │
+    ├─── Core 
+    │   │
+    │   ├───Models
+    │   │    ├───  login (feature name)
+    │   │    └───  user
+    │   │
+    │   ├───Data
+    │   │    └─ Constant
+    │   │
+    │   ├───Repositories
+    │   │    ├───  Auth (feature repository)
+    │   │    └───  Profile
+    │   │
+    │   └─── Network 
+    │         
+    │
+    ├─── Module 
+    │   │
+    │   ├───Auth (module name)
+    │   │    ├───  View
+    │   │    └───  View Model
+    │   │
+    │   └─── Other Module
+    │    
+    └─── Shared
+        ├───  Resource
+        │     ├───  Asset
+        │     ├───  Font
+        │     ├───  Color 
+        │     └───  Localizable
+        │
+        ├───  Views
+        │     └───  all view component
+        │
+        └───  Utils
+```
+
+### Assets 
+add image and color assets can be added in `Asset.xcassets and Color.xcasset`, for strings in `localizable.strings` file, and for external fonts in `Fonts` directory, all assets name will be generate using swiftgen [SwiftGen](https://github.com/SwiftGen/SwiftGen)
 
 #### Libraries
 
