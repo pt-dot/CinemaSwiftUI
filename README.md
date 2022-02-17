@@ -72,7 +72,7 @@ Project Name
 ```
 
 ### Assets 
-add image and color assets can be added in `Asset.xcassets and Color.xcasset`, for strings in `localizable.strings` file, and for external fonts in `Fonts` directory, all assets name will be generate using swiftgen [SwiftGen](https://github.com/SwiftGen/SwiftGen)
+add image and color assets can be added in `.xcassets`, strings name in `localizable.strings` file, and for external fonts in `Fonts` directory, all assets name will be generate using [SwiftGen](https://github.com/SwiftGen/SwiftGen)
 
 #### Libraries
 
